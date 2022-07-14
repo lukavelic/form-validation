@@ -3,3 +3,58 @@
     color: red;
     font-weight: 1000;
 } */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 48px;
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 30vw) 1fr;
+}
+
+.form {
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: auto;
+    width: 100%;
+    font-size: 0.75rem;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: auto;
+    width: 100%;
+}
+
+.input-box label {
+    padding-left: 5px;
+}
+
+input {
+    height: 24px;
+    border-radius: 10px;
+    background-color: rgb(207, 207, 207);
+    border-style: none;
+    padding-left: 5px;
+}
+
+.input-box .error {
+    padding-left: 5px;
+}
+
+input.submit {
+    background-color: rgb(60, 60, 180);
+    color: rgb(207, 207, 207);
+    height: 24px;
+}
+
+.submit {
+    margin-top: 36px;
+}

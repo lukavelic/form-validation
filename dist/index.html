@@ -6,19 +6,48 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="./bundle.js" defer></script>
     </head>
     <body>
-        <form action="#" method="get" class="form">
-            <input type="text" class="text-input name">
-            <input type="text" class="text-input surname">
-            <input type="text" class="text-input country">
-            <input type="number" class="zip-code">
-            <input type="email" class="email-input">
-            <input type="password" class="password">
-            <input type="password" class="password">
-            <input type="submit" class="submit">
-        </form>
-        
-        <script src="./bundle.js" async defer></script>
+        <div class="container">
+            <form class="form" novalidate>
+                <div class="input-box">
+                    <label for="first-name">NAME:</label>
+                    <input type="text" class="text-input name" name="name" minlength="1" required>
+                    <span class="error" id="name"></span>
+                </div>
+                <div class="input-box">
+                    <label for="surname">SURNAME:</label>
+                    <input type="text" class="text-input surname" name="surname" minlength="1" required>
+                    <span class="error" id="surname"></span>
+                </div>
+                <div class="input-box">
+                    <label for="country">COUNTRY:</label>
+                    <input type="text" class="text-input country" name="country" minlength="1" required>
+                    <span class="error" id="country"></span>
+                </div>
+                <div class="input-box">
+                    <label for="zip">ZIP CODE:</label>
+                    <input type="number" class="zip-code" name="zip" min="0" max="99999" required>
+                    <span class="error" id="zip"></span>
+                </div>
+                <div class="input-box">
+                    <label for="email">E-MAIL:</label>
+                    <input type="email" class="email-input" name="email" minlength="8" required>
+                    <span class="error" id="email"></span>
+                </div>
+                <div class="input-box">
+                    <label for="pass">PASSWORD:</label>
+                    <input type="password" class="pass" name="pass" minlength="8" required>
+                    <span class="error" id="pass"></span>
+                </div>
+                <div class="input-box">
+                    <label for="rep-pass">REPEAT PASSWORD:</label>
+                    <input type="password" class="rep-pass" name="rep-pass" minlength="8" required>
+                    <span class="error" id="rep-pass"></span>
+                </div>
+                <input type="submit" class="submit" name="submit">
+            </form>
+        </div>
     </body>
 </html>
